@@ -1,0 +1,10 @@
+<h1>メッセージの編集</h1>
+<%= form_for @tweets , url: {action: :update} do |f| %>
+<%= f.label :message, 'メッセージ' %>
+<%= f.text_field :message %>
+<%= f.submit '更新' %>
+<%end%>
+
+<body bgcolor="#00ccff">
+
+</body>

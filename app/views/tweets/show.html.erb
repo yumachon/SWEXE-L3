@@ -1,0 +1,16 @@
+<h1>ツイート</h1>
+<p>
+    <strong>メッセージ:</strong>
+    <%= @tweets.message %>
+</p>
+
+<p>
+    <strong>日時:</strong>
+    <%= ((Time.current-@tweets.tdate)/60).floor %>分前
+</p>
+
+<%= link_to 'Back', '/' %>
+
+<body bgcolor="#00ccff">
+
+</body>

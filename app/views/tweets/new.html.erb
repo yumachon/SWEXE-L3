@@ -1,0 +1,20 @@
+<% if @tweets.errors.present? %>
+<p>エラーがあるよん</p>
+<p>140文字以内または空白以外で入力してね！</p>
+<ul>
+    <% @tweets.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+    <% end %>
+</ul>
+<% end %>
+
+<h1>メッセージの新規追加</h1>
+<%= form_for @tweets , url: {action: :create} do |f| %>
+    <%= f.label :message, 'メッセージ' %>
+    <%= f.text_field :message %>
+    <%= f.submit '登録' %>
+<% end %>
+
+<body bgcolor="#00ccff">
+
+</body>
